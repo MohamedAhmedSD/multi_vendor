@@ -2,6 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:multi_vendor/core/constants.dart';
+import 'package:multi_vendor/views/buyers/nav_screens/account_screen.dart';
+import 'package:multi_vendor/views/buyers/nav_screens/cart_screen.dart';
+import 'package:multi_vendor/views/buyers/nav_screens/category_screen.dart';
+import 'package:multi_vendor/views/buyers/nav_screens/home_screen.dart';
+import 'package:multi_vendor/views/buyers/nav_screens/search_screen.dart';
+import 'package:multi_vendor/views/buyers/nav_screens/store_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -15,6 +21,17 @@ class MainScreen extends StatefulWidget {
 //? SvgPicture.asset(..., width),
 
 int _pageIndex = 0;
+
+//? add screens on list of widget
+//* becarful with organization
+List<Widget> _pages = [
+  HomeScreen(),
+  CategoryScreen(),
+  StoreScreen(),
+  CartScreen(),
+  SearchScreen(),
+  AccountScreen(),
+];
 
 class _MainScreenState extends State<MainScreen> {
   @override
@@ -81,9 +98,13 @@ class _MainScreenState extends State<MainScreen> {
               label: AppText.account_text),
         ],
       ),
-      body: Center(
-        child: Text("Main Screen"),
-      ),
+
+      //! connect between our body && screens
+      body:
+          // Center(
+          //   child: Text("Main Screen"),
+          // ),
+          _pages[_pageIndex],
     );
   }
 }

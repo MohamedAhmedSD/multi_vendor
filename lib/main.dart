@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:multi_vendor/views/buyers/main_screen.dart';
 
-//! [3] bottom_navigation
+//! [4] nav_screen
 //* go to analysis_options => comment both include && linter
 //* we can get our fonts from => fonts.google.com our any fonts website
 //? we can use svg instead icons
