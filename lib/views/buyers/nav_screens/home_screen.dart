@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:multi_vendor/views/widgets/banner_widget.dart';
+import 'package:multi_vendor/views/widgets/categories_text.dart';
 import 'package:multi_vendor/views/widgets/search_input.dart';
 import 'package:multi_vendor/views/widgets/welcome_text.dart';
 
@@ -24,7 +25,10 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 14,
           ),
+          //! banner
           BannerWidget(),
+          //! categories titles
+          CategoryText(),
         ],
       ),
     );
