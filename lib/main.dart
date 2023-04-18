@@ -11,7 +11,10 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
+    //! it different according device we want to test it
+    //? android, web, ...
+    // options: DefaultFirebaseOptions.currentPlatform,
+    options: DefaultFirebaseOptions.android,
   );
   runApp(const MyApp());
 }
