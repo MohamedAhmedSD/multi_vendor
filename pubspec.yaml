@@ -1,0 +1,42 @@
+name: multi_vendor
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+# Dependencies
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+# Assets && Fonts
+  assets:
+    - assets/
+    - assets/icons/
+    - assets/fonts/
+
+  fonts:
+    - family: Brand-Bold
+      fonts:
+        - asset: assets/fonts/GemunuLibre-Bold.ttf
+
+    - family: Semi-Bold
+      fonts:
+        - asset: assets/fonts/GemunuLibre-SemiBold.ttf
+          weight: 700
