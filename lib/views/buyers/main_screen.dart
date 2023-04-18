@@ -37,16 +37,24 @@ class _MainScreenState extends State<MainScreen> {
         selectedItemColor: AppColors.selectedItemColor,
         unselectedItemColor: AppColors.unSelectedItemColor,
         items: [
+          //! why color of svg not change
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.home),
             label: "HOME",
           ),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset(
-                AppImages.explore,
-                width: 20,
-              ),
-              label: AppText.explore_text),
+            icon: SvgPicture.asset(
+              AppImages.explore,
+              width: 20,
+            ),
+            label: AppText.explore_text,
+            //! our try to change svg color
+            activeIcon: SvgPicture.asset(
+              AppImages.explore,
+              colorFilter:
+                  ColorFilter.mode(Colors.yellow.shade900, BlendMode.srcIn),
+            ),
+          ),
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 AppImages.shop,
