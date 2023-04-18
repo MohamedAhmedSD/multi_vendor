@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:multi_vendor/views/buyers/main_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-//! [4] nav_screen
+//! [5,6] firebase
 //* go to analysis_options => comment both include && linter
 //* we can get our fonts from => fonts.google.com our any fonts website
 //? we can use svg instead icons
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
