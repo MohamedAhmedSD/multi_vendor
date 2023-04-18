@@ -11,6 +11,8 @@ class AppImages {
 }
 
 class AppText {
+  // welcome text
+  static const String welcome_text = "Btoox8 , What are you\n looking for 👀";
   // bottom_navigation
   static const String account_text = "ACCOUNT";
   static const String cart_text = "CART";
@@ -26,4 +28,5 @@ class AppColors {
   static Color selectedItemColor = Colors.black;
   static Color unSelectedItemColor = Colors.yellow.shade900;
   static Color searchInputColor = Colors.white;
+  static Color bannerColor = Colors.yellow.shade900;
 }

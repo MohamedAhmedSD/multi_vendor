@@ -4,7 +4,7 @@ import 'package:multi_vendor/views/buyers/main_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-//! [5,6] firebase
+//! [5,6] firebase => change minsdk => 21 && remove new from => GradleException
 //* go to analysis_options => comment both include && linter
 //* we can get our fonts from => fonts.google.com our any fonts website
 //? we can use svg instead icons
