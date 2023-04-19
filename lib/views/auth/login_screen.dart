@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:multi_vendor/controllers/auth_controller.dart';
 import 'package:multi_vendor/utils/show_snack_bar.dart';
 import 'package:multi_vendor/views/auth/register_screen.dart';
+import 'package:multi_vendor/views/buyers/main_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({super.key});
@@ -21,7 +22,13 @@ class _LoginScreenState extends State<LoginScreen> {
   _loginUsers() async {
     if (_formKey.currentState!.validate()) {
       await _authController.loginUsers(email, password);
-      return showSnack(context, "You are now logged in");
+      return Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (BuildContext context) {
+          return MainScreen();
+        }),
+      );
+      // return showSnack(context, "You are now logged in");
     } else {
       return showSnack(context, "Please feolds most not be empty");
     }
