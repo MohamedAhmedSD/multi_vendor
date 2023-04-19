@@ -4,7 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'views/auth/register_screen.dart';
 
-//! [13] auth_controller
+//! [14] pick image
 //* go to analysis_options => comment both include && linter
 //* we can get our fonts from => fonts.google.com our any fonts website
 //? we can use svg instead icons
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         //! change font family
         fontFamily: "Brand-Bold",
       ),
-      home:  RegisterScreen(),
+      home: RegisterScreen(),
     );
   }
 }
