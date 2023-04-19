@@ -4,7 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'views/auth/register_screen.dart';
 
-//! [12] auth_UI
+//! [13] auth_controller
 //* go to analysis_options => comment both include && linter
 //* we can get our fonts from => fonts.google.com our any fonts website
 //? we can use svg instead icons
