@@ -34,6 +34,20 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
+  // final _auth = FirebaseAuth.instance;
+  // User? loggedinUser;
+  // //!
+  // void getCurrentUser() async {
+  //   try {
+  //     final user = await _auth.currentUser;
+  //     if (user != null) {
+  //       loggedinUser = user;
+  //     }
+  //   } catch (e) {
+  //     print(e);
+  //   }
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,6 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
               InkWell(
                 onTap: () {
                   _loginUsers();
+                  // getCurrentUser();
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width - 40,
