@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:multi_vendor/views/auth/register_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -46,13 +47,13 @@ class LoginScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Already have an account?"),
+              Text("Need an account?"),
               TextButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) {
-                      return LoginScreen();
+                      return RegisterScreen();
                     }),
                   );
                 },
