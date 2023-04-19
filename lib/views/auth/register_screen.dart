@@ -19,10 +19,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   //* we make method signUp use that method inside auth controller
 
-
   _signUpUser() async {
     if (_formkey.currentState!.validate()) {
       await _authController.signUpUsers(email, fullName, phoneNumber, password);
+
+      //! reset fields
+      setState(() {
+        _formkey.currentState!.reset();
+      });
       return showSnack(
           context, "Congratulations Account has been created for you");
     } else {
