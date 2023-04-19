@@ -39,4 +39,20 @@ class AuthController {
     } catch (e) {}
     return res;
   }
+
+  //! login method
+  loginUsers(String email, String password) async {
+    String res = "something went wrong";
+
+    try {
+      if (email.isNotEmpty && password.isNotEmpty) {
+        await _auth.signInWithEmailAndPassword(
+            email: email, password: password);
+        return res;
+      }
+    } catch (e) {
+      res = e.toString();
+    }
+    return res;
+  }
 }
