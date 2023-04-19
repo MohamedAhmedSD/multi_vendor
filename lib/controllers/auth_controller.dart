@@ -26,6 +26,10 @@ class AuthController {
           'email': email,
           "fullName": fullName,
           "phoneNumber": phoneNumber,
+          //? extra fields to make user update its data
+          //! delete first old auth && collection we update its fields
+          "buyerId": cred.user!.uid,
+          "address": "",
         });
 
         res = "success";
