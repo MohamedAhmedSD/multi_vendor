@@ -72,21 +72,26 @@ class RegisterScreen extends StatelessWidget {
               ),
             ),
             //! button
-            Container(
-              width: MediaQuery.of(context).size.width - 40,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.yellow.shade900,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                child: Text(
-                  "Register",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 19,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 4),
+            GestureDetector(
+              onTap: () {
+                _signUpUser();
+              },
+              child: Container(
+                width: MediaQuery.of(context).size.width - 40,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.yellow.shade900,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: Text(
+                    "Register",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 19,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 4),
+                  ),
                 ),
               ),
             ),
