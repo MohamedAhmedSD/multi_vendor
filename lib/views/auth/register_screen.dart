@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:multi_vendor/controllers/auth_controller.dart';
 import 'package:multi_vendor/utils/show_snack_bar.dart';
 
@@ -16,6 +17,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final AuthController _authController = AuthController();
 
   late String email, fullName, phoneNumber, password;
+  //! pick up function
+  pickProfileImage(ImageSource source) async {
+    final ImagePicker _imagePicker = ImagePicker();
+
+    XFile? _file = await _imagePicker.pickImage(source: source);
+
+    if (_file != null) {
+      return await _file.readAsBytes();
+    } else {
+      print("No Image selected");
+    }
+  }
 
   //* we make method signUp use that method inside auth controller
 
