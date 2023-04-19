@@ -18,6 +18,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   late String email, fullName, phoneNumber, password;
 
   //* we make method signUp use that method inside auth controller
+
+
   _signUpUser() async {
     if (_formkey.currentState!.validate()) {
       await _authController.signUpUsers(email, fullName, phoneNumber, password);
