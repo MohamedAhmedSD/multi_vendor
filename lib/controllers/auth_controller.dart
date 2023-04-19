@@ -48,7 +48,9 @@ class AuthController {
       if (email.isNotEmpty && password.isNotEmpty) {
         await _auth.signInWithEmailAndPassword(
             email: email, password: password);
-        return res;
+        res = "sucess";
+      } else {
+        res = "Please fields must not be empty";
       }
     } catch (e) {
       res = e.toString();
