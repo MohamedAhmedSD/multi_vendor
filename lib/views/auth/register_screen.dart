@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:multi_vendor/controllers/auth_controller.dart';
+import 'package:multi_vendor/utils/show_snack_bar.dart';
 
 import 'login_screen.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   RegisterScreen({super.key});
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
   //! use auth controller, onchanged and call function
   final AuthController _authController = AuthController();
+
   late String email, fullName, phoneNumber, password;
+
   //* we make method signUp use that method inside auth controller
-
-  // _signUpUser() async {
-  //   String res = await _authController.signUpUsers(
-  //       email, fullName, phoneNumber, password);
-
-  //   if (res != "success") {
-  //     print(res);
-  //   } else {
-  //     print("Good");
-  //   }
-  // }
-
   _signUpUser() async {
     if (_formkey.currentState!.validate()) {
       await _authController.signUpUsers(email, fullName, phoneNumber, password);
+      return showSnack(
+          context, "Congratulations Account has been created for you");
     } else {
-      print("hmm bad guy you are so wrong");
+      // print("hmm bad guy you are so wrong");
+
+      return showSnack(context, "Please field must not be empty");
     }
   }
-  //! use signup with validator
 
-  //! use form with its key,
+  //! use signup with validator
   GlobalKey<FormState> _formkey = GlobalKey<FormState>();
 
   @override
