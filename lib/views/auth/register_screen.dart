@@ -16,6 +16,9 @@ class RegisterScreen extends StatelessWidget {
             "Create Customer's Account",
             style: TextStyle(fontSize: 20),
           ),
+          SizedBox(
+            height: 16,
+          ),
           CircleAvatar(
             radius: 64,
             backgroundColor: Colors.yellow.shade900,
@@ -40,7 +43,7 @@ class RegisterScreen extends StatelessWidget {
             padding: EdgeInsets.all(13),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: "Enter Pgone Number",
+                labelText: "Enter Phone Number",
               ),
             ),
           ),
@@ -60,13 +63,15 @@ class RegisterScreen extends StatelessWidget {
               color: Colors.yellow.shade900,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Text(
-              "Register",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 19,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 4),
+            child: Center(
+              child: Text(
+                "Register",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 19,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 4),
+              ),
             ),
           ),
           Row(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:multi_vendor/views/buyers/main_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'views/auth/register_screen.dart';
 
 //! [12] auth_UI
 //* go to analysis_options => comment both include && linter
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         //! change font family
         fontFamily: "Brand-Bold",
       ),
-      home: const MainScreen(),
+      home: const RegisterScreen(),
     );
   }
 }

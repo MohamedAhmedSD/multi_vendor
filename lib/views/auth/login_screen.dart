@@ -15,12 +15,20 @@ class LoginScreen extends StatelessWidget {
             "Login Customer's Account",
             style: TextStyle(fontSize: 20),
           ),
-
+         
           Padding(
             padding: EdgeInsets.all(13),
             child: TextFormField(
               decoration: InputDecoration(
                 labelText: "Enter Email",
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(13),
+            child: TextFormField(
+              decoration: InputDecoration(
+                labelText: "Password",
               ),
             ),
           ),
@@ -35,13 +43,15 @@ class LoginScreen extends StatelessWidget {
               color: Colors.yellow.shade900,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Text(
-              "Login",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 19,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 4),
+            child: Center(
+              child: Text(
+                "Login",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 19,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 4),
+              ),
             ),
           ),
           Row(
