@@ -56,9 +56,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
               SizedBox(
                 height: 16,
               ),
-              CircleAvatar(
-                radius: 64,
-                backgroundColor: Colors.yellow.shade900,
+              //! use stack
+
+              Stack(
+                children: [
+                  CircleAvatar(
+                    radius: 64,
+                    backgroundColor: Colors.yellow.shade900,
+                  ),
+                  Positioned(
+                    right: 0,
+                    top: 5,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.photo_camera,
+                        // color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               Padding(
                 padding: EdgeInsets.all(13),
