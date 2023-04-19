@@ -8,71 +8,73 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "Login Customer's Account",
-            style: TextStyle(fontSize: 20),
-          ),
-         
-          Padding(
-            padding: EdgeInsets.all(13),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "Enter Email",
+          child: SingleChildScrollView(
+            child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+            Text(
+              "Login Customer's Account",
+              style: TextStyle(fontSize: 20),
+            ),
+                   
+            Padding(
+              padding: EdgeInsets.all(13),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  labelText: "Enter Email",
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.all(13),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "Password",
+            Padding(
+              padding: EdgeInsets.all(13),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  labelText: "Password",
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          //! button
-          Container(
-            width: MediaQuery.of(context).size.width - 40,
-            height: 50,
-            decoration: BoxDecoration(
-              color: Colors.yellow.shade900,
-              borderRadius: BorderRadius.circular(10),
+            SizedBox(
+              height: 20,
             ),
-            child: Center(
-              child: Text(
-                "Login",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 19,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 4),
+            //! button
+            Container(
+              width: MediaQuery.of(context).size.width - 40,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.yellow.shade900,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Center(
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 19,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 4),
+                ),
               ),
             ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Need an account?"),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return RegisterScreen();
-                    }),
-                  );
-                },
-                child: Text("Login"),
-              ),
-            ],
-          )
-        ],
-      )),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Need an account?"),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return RegisterScreen();
+                      }),
+                    );
+                  },
+                  child: Text("Login"),
+                ),
+              ],
+            )
+                  ],
+                ),
+          )),
     );
   }
 }

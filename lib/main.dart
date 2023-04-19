@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         //! change font family
         fontFamily: "Brand-Bold",
       ),
-      home: const RegisterScreen(),
+      home:  RegisterScreen(),
     );
   }
 }

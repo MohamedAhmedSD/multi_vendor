@@ -5,6 +5,7 @@ class AuthController {
 
   Future<String> signUpUsers(String email, String fullName, String phoneNumber,
       String password) async {
+    //? posible error
     String res = "Some error occured";
     try {
       if (email.isNotEmpty &&
@@ -15,6 +16,8 @@ class AuthController {
 
         UserCredential _cred = await _auth.createUserWithEmailAndPassword(
             email: email, password: password);
+
+        res = "success";
       } else {
         res = "Please fields must not be empty";
       }
