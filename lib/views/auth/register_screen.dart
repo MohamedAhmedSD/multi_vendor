@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:multi_vendor/controllers/auth_controller.dart';
@@ -28,6 +30,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
     } else {
       print("No Image selected");
     }
+  }
+
+  //! select image from gallery || camera
+  bool _isLoading = false;
+  Uint8List? _image;
+
+  selectedGalleryImage() async {
+    Uint8List im = await _authController.pickProfileImage(ImageSource.gallery);
+    setState(() {
+      _image = im;
+    });
+  }
+
+  selectedCameraImage() async {
+    Uint8List im = await _authController.pickProfileImage(ImageSource.camera);
+    setState(() {
+      _image = im;
+    });
   }
 
   //* we make method signUp use that method inside auth controller
@@ -81,7 +101,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     right: 0,
                     top: 5,
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        selectedGalleryImage();
+                      },
                       icon: Icon(
                         Icons.photo_camera,
                         // color: Colors.white,
