@@ -42,6 +42,9 @@ class RegisterScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(13),
               child: TextFormField(
+                onChanged: (value) {
+                  email = value;
+                },
                 decoration: InputDecoration(
                   labelText: "Enter Email",
                 ),
@@ -50,6 +53,9 @@ class RegisterScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(13),
               child: TextFormField(
+                onChanged: (value) {
+                  fullName = value;
+                },
                 decoration: InputDecoration(
                   labelText: "Enter Full Name",
                 ),
@@ -58,6 +64,9 @@ class RegisterScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(13),
               child: TextFormField(
+                onChanged: (value) {
+                  phoneNumber = value;
+                },
                 decoration: InputDecoration(
                   labelText: "Enter Phone Number",
                 ),
@@ -66,6 +75,9 @@ class RegisterScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(13),
               child: TextFormField(
+                onChanged: (value) {
+                  password = value;
+                },
                 decoration: InputDecoration(
                   labelText: "Password",
                 ),
