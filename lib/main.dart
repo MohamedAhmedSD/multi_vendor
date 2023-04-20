@@ -5,6 +5,7 @@ import 'firebase_options.dart';
 import 'views/auth/register_screen.dart';
 
 //! [14] pick image
+//?  flutter run -d chrome --web-renderer html
 //* go to analysis_options => comment both include && linter
 //* we can get our fonts from => fonts.google.com our any fonts website
 //? we can use svg instead icons

@@ -59,11 +59,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
       //! reset fields
       setState(() {
         _formkey.currentState!.reset();
+        _isLoading = false;
       });
       return showSnack(
           context, "Congratulations Account has been created for you");
     } else {
       // print("hmm bad guy you are so wrong");
+      setState(() {
+        _isLoading = false;
+      });
 
       return showSnack(context, "Please field must not be empty");
     }
