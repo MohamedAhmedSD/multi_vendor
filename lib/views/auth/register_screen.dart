@@ -93,10 +93,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
               Stack(
                 children: [
-                  CircleAvatar(
-                    radius: 64,
-                    backgroundColor: Colors.yellow.shade900,
-                  ),
+                  _image != null
+                      ? CircleAvatar(
+                          radius: 64,
+                          backgroundColor: Colors.yellow.shade900,
+                          backgroundImage: MemoryImage(_image!),
+                        )
+                      : CircleAvatar(
+                          radius: 64,
+                          backgroundColor: Colors.yellow.shade900,
+                          backgroundImage: NetworkImage(
+                              "https://www.citypng.com/public/uploads/preview/download-black-male-user-profile-icon-png-116371332534k5baafcll.png"),
+                        ),
                   Positioned(
                     right: 0,
                     top: 5,
